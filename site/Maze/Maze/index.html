@@ -1,0 +1,1187 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mrantex.github.io/BomberDoc/Maze/Maze/">
+      
+      <link rel="icon" href="../../img/Bomberball.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.7">
+    
+    
+      
+        <title>Maze - BomberDoc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.cd566b2a.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mazegd" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="BomberDoc" class="md-header__button md-logo" aria-label="BomberDoc" data-md-component="logo">
+      
+  <img src="../../img/Bomberball.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BomberDoc
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Maze
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Labyrinthe
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../IHM/MainMenu/" class="md-tabs__link">
+        IHM
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Bonus/Bonus/" class="md-tabs__link">
+        Bonus
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../GameManager/" class="md-tabs__link">
+      GameManager
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../Player/" class="md-tabs__link">
+      Player
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../Bomb/" class="md-tabs__link">
+      Bomb
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../Enemy/" class="md-tabs__link">
+      Enemy
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="BomberDoc" class="md-nav__button md-logo" aria-label="BomberDoc" data-md-component="logo">
+      
+  <img src="../../img/Bomberball.png" alt="logo">
+
+    </a>
+    BomberDoc
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Labyrinthe
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Labyrinthe" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Labyrinthe
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Maze
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Maze
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declaration-des-differentes-scenes-en-les-chargeant-depuis-un-path" class="md-nav__link">
+    Déclaration des différentes scènes en les chargeant depuis un path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-a-dautres-objetsscenes" class="md-nav__link">
+    Références à d'autres objets/scènes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#declaration-des-images-de-murs-cassables-en-les-chargeant-depuis-un-path" class="md-nav__link">
+    Déclaration des images de murs cassables en les chargeant depuis un path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametres-de-generation-du-maze" class="md-nav__link">
+    Paramètres de génération du maze
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identifiants-des-tiles-que-lon-souhaite-placer" class="md-nav__link">
+    Identifiants des tiles que l'on souhaite placer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables-globales" class="md-nav__link">
+    Variables globales
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonctions" class="md-nav__link">
+    Fonctions
+  </a>
+  
+    <nav class="md-nav" aria-label="Fonctions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenes" class="md-nav__link">
+    Scènes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generation-du-labyrinthe" class="md-nav__link">
+    Génération du labyrinthe
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TileMap/" class="md-nav__link">
+        TileMap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Wall/" class="md-nav__link">
+        Wall
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BonusWall/" class="md-nav__link">
+        BonusWall
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          IHM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="IHM" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          IHM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/MainMenu/" class="md-nav__link">
+        MainMenu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/EndOfGame/" class="md-nav__link">
+        EndOfGame
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/HUD/" class="md-nav__link">
+        HUD
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Bonus
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bonus" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Bonus
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bonus/Bonus/" class="md-nav__link">
+        Bonus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bonus/BonusGodMode/" class="md-nav__link">
+        GodMod
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bonus/BonusLumiere/" class="md-nav__link">
+        Lumière
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bonus/BonusNombre/" class="md-nav__link">
+        Capacité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bonus/BonusPousser/" class="md-nav__link">
+        Pousser
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bonus/BonusRange/" class="md-nav__link">
+        Portée
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bonus/BonusVitesse/" class="md-nav__link">
+        Vitesse
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GameManager/" class="md-nav__link">
+        GameManager
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Player/" class="md-nav__link">
+        Player
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bomb/" class="md-nav__link">
+        Bomb
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Enemy/" class="md-nav__link">
+        Enemy
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="mazegd">Maze.gd</h1>
+<blockquote>
+<p>Ce script permet de gérer la scène maze, construire le labyrinthe et instancier les joueurs, ennemis....</p>
+</blockquote>
+<p><strong>Extends:</strong> <a href="https://docs.godotengine.org/fr/stable/classes/class_node.html">Node</a></p>
+<h2 id="variables">Variables</h2>
+<h4 id="declaration-des-differentes-scenes-en-les-chargeant-depuis-un-path">Déclaration des différentes scènes en les chargeant depuis un path</h4>
+<ul>
+<li>Chargement de la scène d&rsquo;ennemis : <br/>
+        ||  <strong>var Enemy</strong><br/></li>
+</ul>
+<hr />
+<ul>
+<li>Chargement de la scène de bonus Vitesse : <br/>
+        ||  <strong>var bonusVitesse</strong><br/></li>
+</ul>
+<hr />
+<ul>
+<li>Chargement de la scène de bonus Range : <br/>
+        ||  <strong>var bonusRange</strong><br/></li>
+</ul>
+<hr />
+<ul>
+<li>Chargement de la scène de bonus Pousser : <br/>
+        ||  <strong>var bonusPousser</strong><br/></li>
+</ul>
+<hr />
+<ul>
+<li>Chargement de la scène de bonus Nombre : <br/>
+        ||  <strong>var bonusNombre</strong><br/></li>
+</ul>
+<hr />
+<ul>
+<li>Chargement de la scène de bonus Lumiere : <br/>
+        ||  <strong>var bonusLumiere</strong><br/></li>
+</ul>
+<hr />
+<ul>
+<li>Chargement de la scène de bonus GodMode : <br/>
+        ||  <strong>var bonusGodMode</strong><br/></li>
+</ul>
+<hr />
+<ul>
+<li>Chargement de la scène de mur cassable : <br/>
+        ||  <strong>var caillou</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Chargement de la scène de mur cassables contenant des bonus : <br/>
+        ||  <strong>var bonusWall</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Chargement de la scène de joueur : <br/>
+        ||  <strong>var player_model</strong> <br/></li>
+</ul>
+<hr />
+<h4 id="references-a-dautres-objetsscenes">Références à d&rsquo;autres objets/scènes</h4>
+<ul>
+<li>Référence à la <a href="https://docs.godotengine.org/en/3.4/classes/class_tilemap.html">TileMap</a> du labyrinthe : <br/>
+        ||  <strong>onready var maze</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Générateur de nombre aléatoire : <br/>
+        ||  <strong>onready var rng</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Récupération des données de <a href="../../GameManager">GameManager</a> : <br/>
+        ||  <strong>onready var GameManager</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Difficulté de la maze récupérée dans le <a href="../../GameManager">GameManager</a> : <br/>
+        ||  <strong>onready var difficulty</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Nombre de joueur à instancier sur la maze, récupéré dans le <a href="../../GameManager">GameManager</a> : <br/>
+        ||  <strong>onready var nb_player</strong> <br/></li>
+</ul>
+<hr />
+<h4 id="declaration-des-images-de-murs-cassables-en-les-chargeant-depuis-un-path">Déclaration des images de murs cassables en les chargeant depuis un path</h4>
+<ul>
+<li>Chargement de l&rsquo;image de mur cassable 1 : <br/>
+        ||  <strong>var wall1</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Chargement de l&rsquo;image de mur cassable 2 : <br/>
+        ||  <strong>var wall2</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Chargement de l&rsquo;image de mur cassable 3 : <br/>
+        ||  <strong>var wall3</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Chargement de l&rsquo;image de mur cassable 4 : <br/>
+        ||  <strong>var wall4</strong> <br/></li>
+</ul>
+<hr />
+<h4 id="parametres-de-generation-du-maze">Paramètres de génération du maze</h4>
+<ul>
+<li>Longueur extérieure du labyrinthe en cases, initialisée à 15 : <br/>
+        ||  <strong>var length</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Largeur extérieure du labyrinthe en cases, initialisée à 13 : <br/>
+        ||  <strong>var width</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Multiplicateur de lenteur de génération (&gt; 0, + petit = + rapide), initialisé à 1 : <br/>
+        ||  <strong>var genSpeed</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Probabilité minimum de faire apparaitre un mur (difficulté faible), initialisé à 0.2 : <br/>
+        ||  <strong>var probaWallMin</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Probabilité maximum de faire apparaitre un mur (difficulté forte), initialisé à 0.95 : <br/>
+        ||  <strong>var probaWallMax</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Probabilité de base de créer un chemin pour un ennemi, initialisé à 0.6 : <br/>
+        ||  <strong>var baseProbaEnemyPath</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Probabilité retirée à la précédente chaque tour, initialisé à 0.15 : <br/>
+        ||  <strong>var minusProbaEachTurn</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Distance minimale requise entre le point de spawn et la sortie, initialisée à 8 : <br/>
+        ||  <strong>var distanceMinSpawnExit</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Distance minimale requise entre le spawn et un ennemi, initialisée à 5 : <br/>
+        ||  <strong>var distanceMinSpawnEnemy</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Nombre maximal d&rsquo;ennemis, initialisé à 7 : <br/>
+        ||  <strong>var nbMaxEnemy</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Probabilité de base d&rsquo;avoir un mur cassable avec bonus au lieu d&rsquo;un mur cassable lambda, initialisé à 0.2 : <br/>
+        ||  <strong>var probaBonus</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>[Debug] Ennemis activés: <br/>
+        ||  <strong>var spawnEnnemies</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>[Debug] Murs cassables activés 1 : <br/>
+        ||  <strong>var spawnWalls</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>[Debug] Apparition de la sortie : <br/>
+        ||  <strong>var spawnExit</strong> <br/></li>
+</ul>
+<hr />
+<h4 id="identifiants-des-tiles-que-lon-souhaite-placer">Identifiants des tiles que l&rsquo;on souhaite placer</h4>
+<ul>
+<li>Identifiant des blocs de murs incassables (tableau): <br/>
+        ||  <strong>var obsidian</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Identifiant du sol : <br/>
+        ||  <strong>var sol</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Identifiant de la sortie : <br/>
+        ||  <strong>var exit</strong> <br/></li>
+</ul>
+<hr />
+<h4 id="variables-globales">Variables globales</h4>
+<ul>
+<li>Probabilité d&rsquo;avoir un mur cassable sur une case : <br/>
+        ||  <strong>var probaWall</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Position du spawn : <br/>
+        ||  <strong>var spawnPos</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Position de la sortie : <br/>
+        ||  <strong>var exitPos</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Tableau des positions des spawns des joueurs : <br/>
+        ||  <strong>var playersSpawnPositions</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Liste des joueurs : <br/>
+        ||  <strong>var playersList</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Tableau des positions de spawn des ennemis : <br/>
+        ||  <strong>var enemyPositions</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Nombre d&rsquo;ennemis : <br/>
+        ||  <strong>var nbEnemy</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Tableau des murs cassables dans le labyrinthe : <br/>
+        ||  <strong>var walls</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Tableau des textures des différents murs cassables : <br/>
+        ||  <strong>var textWalls</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Joueur : <br/>
+        ||  <strong>var player</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Si le labyrinthe est chargé ou non, initialisé à false : <br/>
+        ||  <strong>var loaded</strong> <br/></li>
+</ul>
+<hr />
+<h2 id="fonctions">Fonctions</h2>
+<h4 id="scenes">Scènes</h4>
+<ul>
+<li>Fonction lancée à l&rsquo;initialisation de la scène de labyrinthe sert à jouer la musique du mode de jeu choisi, désactive les ennemis et la sortie si le mode de jeu est en multi. Puis initialise le labyrinthe : <br/>
+            || <strong>func ready()</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Fonction lancée à chaque frame du labyrinthe, sert à détecter quand un joueur est mort : <br/>
+            || <strong>func process(delta)</strong> <br/></li>
+</ul>
+<hr />
+<h4 id="generation-du-labyrinthe">Génération du labyrinthe</h4>
+<ul>
+<li>Retourne un tableau contenant les positions des murs cassables du labyrinthe : <br/>
+            || <strong>func getWallsPos()</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Renvoie la distance de manhattan entre deux points : <br/>
+            || <strong>func manhattan(a : Vector2, b : Vector2)</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Renvoie la probabilité d&rsquo;avoir un mur cassable à une position en fonction de la difficulté. Et des paramètres de génération comme la probabilité minimale d&rsquo;avoir un mur cassable : <br/>
+            || <strong>func getNewProba()</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Renvoie si un point est dans le labyrinthe ou non : <br/>
+            || <strong>func isInBounds(pos : Vector2)</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Renvoie le nombre d&rsquo;ennemis qu&rsquo;il doit y avoir dans le labyrinthe en fonction de la difficulté, et des paramètres de génération comme nbMaxEnemy. Il y a aussi aléatoirement 1 ennemi en plus ou en moins : <br/>
+            || <strong>func getNbEnemy()</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Permet de générer un labyrinthe avec :<ul>
+<li>Des murs incassables selon un pattern donné</li>
+<li>Des murs cassables aléatoirement selon la difficulté</li>
+<li>Des murs cassables contenants un bonus aléatoirement</li>
+<li>Un point de spawn dans un des coins du labyrinthe</li>
+<li>Une sortie</li>
+<li>Des ennemis selon la difficulté, ayant une position et un type aléatoire</li>
+<li>Une gestion du multijoueur (pas de HUD, + de bonus, pas d&rsquo;ennemis ni de sortie,&hellip;)
+Et suivant certaines règles :</li>
+<li>Il y a 3 cases vides dans le coin du spawn (pour pouvoir poser une bombe)</li>
+<li>La sortie est à + de distanceMinSpawnExit cases (manhattan) du spawn</li>
+<li>Il n&rsquo;y a pas d&rsquo;ennemi à - de distanceMinSpawnEnemy case du spawn : <br/>
+&mdash;         || <strong>func initMaze(nbPlayer : int)</strong> <br/></li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Fonction servant à instancier, initialiser et placer le(s) joueur(s) qui vont jouer et prenant le nombre de joueurs en paramètres: <br/>
+            || <strong>func initPlayers()</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Instancie, initialise et place les ennemis à partir de la liste des ennemis : <br/>
+            || <strong>func initEnemy()</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Fonction récursive permettant de créer un chemin aléatoirement dans le labyrinthe case par case pour les ennemis, à chaque nouvel appel la probabilité de rallonger le chemin diminue : <br/>
+            || <strong>func alterPath(pos : Vector2, proba : float)</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Fonction récursive permettant de créer un chemin aléatoirement dans le labyrinthe case par case pour les ennemis, à chaque nouvel appel la probabilité de rallonger le chemin diminue : <br/>
+            || <strong>func alterPath(pos : Vector2, proba : float)</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Renvoie toutes les combinaisons possibles entre plusieurs listes d&rsquo;un tableau de listes : <br/>
+            || <strong>func combinaisons(a)</strong> <br/></li>
+</ul>
+<hr />
+<p>Gère des instances de :
+<a href="../../Player">Player</a>, <a href="../../Maze/Wall">Wall</a>, <a href="../../Bonus/Bonus">Bonus</a>, <a href="../../Bonus/BonusRange">BonusRange</a>, <a href="../../Bonus/BonusNombre">BonusNombre</a>, <a href="../../Bonus/BonusPousser">BonusPousser</a>, <a href="../../Bonus/BonusLumiere">BonusLumiere</a>, <a href="../../Bonus/BonusGodMode">BonusGodMode</a>, <a href="../../Bonus/BonusVitesse">BonusVitesse</a>, <a href="../../IHM/HUD">HUD</a></p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+      
+        
+        <a href="../TileMap/" class="md-footer__link md-footer__link--next" aria-label="Next: TileMap" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              TileMap
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.instant", "navigation.tabs", "toc.integrate", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.01de222e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,59 @@
+site_name: BomberDoc
+site_url: https://mrantex.github.io/BomberDoc/
+
+#repo_url: https://github.com/CrazyKamel/bomberball
+#repo_name: Bomberball
+
+markdown_extensions:
+    - smarty
+
+theme:
+  icon:
+      repo: fontawesome/brands/github
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline 
+        name: Switch to dark mode
+      primary: deep orange
+      accent: deep orange
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+      primary: deep orange
+      accent: deep orange
+  name: material
+  logo: img/Bomberball.png
+  favicon: img/Bomberball.png
+  features:
+    - navigation.expand
+    - navigation.instant
+    - navigation.tabs
+    - toc.integrate
+    - search.suggest
+
+nav:
+  - Labyrinthe:
+    - Maze: Maze/Maze.md
+    - TileMap: Maze/TileMap.md
+    - Wall: Maze/Wall.md
+    - BonusWall: Maze/BonusWall.md
+  - IHM: 
+    - MainMenu: IHM/MainMenu.md
+    - EndOfGame: IHM/EndOfGame.md
+    - HUD: IHM/HUD.md
+  - Bonus:
+    - Bonus: Bonus/Bonus.md
+    - GodMod: Bonus/BonusGodMode.md
+    - Lumière: Bonus/BonusLumiere.md
+    - Capacité: Bonus/BonusNombre.md
+    - Pousser: Bonus/BonusPousser.md
+    - Portée: Bonus/BonusRange.md
+    - Vitesse: Bonus/BonusVitesse.md
+  - GameManager: GameManager.md
+  - Player: Player.md
+  - Bomb: Bomb.md
+  - Enemy: Enemy.md
+
+

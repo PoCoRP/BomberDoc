@@ -1,0 +1,1197 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mrantex.github.io/BomberDoc/Player/">
+      
+      <link rel="icon" href="../img/Bomberball.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.7">
+    
+    
+      
+        <title>Player - BomberDoc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.cd566b2a.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#playergd" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="BomberDoc" class="md-header__button md-logo" aria-label="BomberDoc" data-md-component="logo">
+      
+  <img src="../img/Bomberball.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BomberDoc
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Player
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Maze/Maze/" class="md-tabs__link">
+        Labyrinthe
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../IHM/MainMenu/" class="md-tabs__link">
+        IHM
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Bonus/Bonus/" class="md-tabs__link">
+        Bonus
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../GameManager/" class="md-tabs__link">
+      GameManager
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      Player
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../Bomb/" class="md-tabs__link">
+      Bomb
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../Enemy/" class="md-tabs__link">
+      Enemy
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="BomberDoc" class="md-nav__button md-logo" aria-label="BomberDoc" data-md-component="logo">
+      
+  <img src="../img/Bomberball.png" alt="logo">
+
+    </a>
+    BomberDoc
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" data-md-state="indeterminate" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Labyrinthe
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Labyrinthe" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Labyrinthe
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Maze/Maze/" class="md-nav__link">
+        Maze
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Maze/TileMap/" class="md-nav__link">
+        TileMap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Maze/Wall/" class="md-nav__link">
+        Wall
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Maze/BonusWall/" class="md-nav__link">
+        BonusWall
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          IHM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="IHM" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          IHM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IHM/MainMenu/" class="md-nav__link">
+        MainMenu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IHM/EndOfGame/" class="md-nav__link">
+        EndOfGame
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IHM/HUD/" class="md-nav__link">
+        HUD
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Bonus
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bonus" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Bonus
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bonus/Bonus/" class="md-nav__link">
+        Bonus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bonus/BonusGodMode/" class="md-nav__link">
+        GodMod
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bonus/BonusLumiere/" class="md-nav__link">
+        Lumière
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bonus/BonusNombre/" class="md-nav__link">
+        Capacité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bonus/BonusPousser/" class="md-nav__link">
+        Pousser
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bonus/BonusRange/" class="md-nav__link">
+        Portée
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bonus/BonusVitesse/" class="md-nav__link">
+        Vitesse
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GameManager/" class="md-nav__link">
+        GameManager
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Player
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Player
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relatives-a-maze" class="md-nav__link">
+    Relatives à Maze
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relatives-au-score" class="md-nav__link">
+    Relatives au score
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relatives-au-joueur" class="md-nav__link">
+    Relatives au joueur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chargement-et-nom-des-animations-des-mouvements-des-joueurs" class="md-nav__link">
+    Chargement et nom des animations des mouvements des joueurs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relatives-aux-bombes" class="md-nav__link">
+    Relatives aux bombes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relatives-aux-bonus" class="md-nav__link">
+    Relatives aux bonus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relatives-a-la-lumiere" class="md-nav__link">
+    Relatives à la lumière
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mode-de-jeu" class="md-nav__link">
+    Mode de jeu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commandes-des-joueurs" class="md-nav__link">
+    Commandes des joueurs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonctions" class="md-nav__link">
+    Fonctions
+  </a>
+  
+    <nav class="md-nav" aria-label="Fonctions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scene" class="md-nav__link">
+    Scène
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getters" class="md-nav__link">
+    Getters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relatives-aux-bonus_1" class="md-nav__link">
+    Relatives aux Bonus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-du-multijoueur" class="md-nav__link">
+    Gestion du multijoueur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-des-bombes-et-explosions" class="md-nav__link">
+    Gestion des bombes et explosions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-de-partie" class="md-nav__link">
+    Fin de partie
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bomb/" class="md-nav__link">
+        Bomb
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Enemy/" class="md-nav__link">
+        Enemy
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="playergd">Player.gd</h1>
+<blockquote>
+<p>Ce script permet de gérer les actions du joueur (son comportement et ses réactions à son environnement).</p>
+</blockquote>
+<p><strong>Extends:</strong> [KinematicBody2D]</p>
+<h2 id="variables">Variables</h2>
+<h4 id="relatives-a-maze">Relatives à Maze</h4>
+<p><strong>Ces variables vont récupérer les données du parent de player : Maze</strong> <br/></p>
+<ul>
+<li>Récupération de la Maze dès que la scène Player est appelée  : <br/>
+        ||  <strong>onready var Maze</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Récupération de la position de la sortie du labyrinthe (mode Solo) depuis Maze : <br/>
+        ||  <strong>var exitPos</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>TileMap du labyrinthe : <br/>
+        ||  <strong>var maze</strong><br/></li>
+</ul>
+<hr />
+<ul>
+<li>Pour stocker la taille de l&rsquo;écran : <br/>
+        ||  <strong>var screen_size</strong><br/></li>
+</ul>
+<hr />
+<h4 id="relatives-au-score">Relatives au score</h4>
+<ul>
+<li>Score du joueur (Mode Solo) : <br/>
+        ||  <strong>var score</strong><br/></li>
+</ul>
+<hr />
+<h4 id="relatives-au-joueur">Relatives au joueur</h4>
+<ul>
+<li>Vitesse du joueur, initialisé à 250 : <br/>
+        ||  <strong>var speed</strong><br/></li>
+</ul>
+<hr />
+<ul>
+<li>Dernière position du joueur (il est nécessaire de la connaître pour le bon fonctionnement des annimations), initialisé à 0 (ce qui correspond à la front view du personnage) : <br/>
+        ||  <strong>var lastDirection</strong><br/></li>
+</ul>
+<hr />
+<ul>
+<li>Nombre de vies du joueur en mode solo, initialisée à 3 : <br/>
+        ||  <strong>var heart</strong><br/></li>
+</ul>
+<hr />
+<ul>
+<li>Identifiant (entier) du joueur instancié (utilisé en mode Multi) : <br/>
+        ||  <strong>var id</strong><br/></li>
+</ul>
+<hr />
+<h4 id="chargement-et-nom-des-animations-des-mouvements-des-joueurs">Chargement et nom des animations des mouvements des joueurs</h4>
+<ul>
+<li>Animations marcher vers le bas : <br/>
+        ||  **var animDown<br/></li>
+</ul>
+<hr />
+<ul>
+<li>Animation immobile vers le bas : <br/>
+        ||  <strong>var animIdleFront</strong><br/></li>
+</ul>
+<hr />
+<ul>
+<li>Animation marcher vers le haut : <br/>
+        ||  **var animUp<br/></li>
+</ul>
+<hr />
+<ul>
+<li>Animation immobile vers le haut : <br/>
+        ||  **var animIdleBack<br/></li>
+</ul>
+<hr />
+<ul>
+<li>Animation marcher vers la gauche : <br/>
+        ||  **var animLeft<br/></li>
+</ul>
+<hr />
+<ul>
+<li>Animation immobile vers la gauche : <br/>
+        ||  <strong>var animIdleLeft</strong><br/></li>
+</ul>
+<hr />
+<ul>
+<li>Animation marcher vers la droite : <br/>
+        ||  **var animRight<br/></li>
+</ul>
+<hr />
+<ul>
+<li>Animation immobile vers la droite : <br/>
+        ||  <strong>var animIdleRight</strong><br/></li>
+</ul>
+<hr />
+<h4 id="relatives-aux-bombes">Relatives aux bombes</h4>
+<ul>
+<li>Déclaration de la scène &ldquo;Bombe&rdquo; en la chargeant depuis un path : <br/>
+        ||  <strong>var Bombe</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Portée de l&rsquo;explosion des instances de &ldquo;Bombe&rdquo;, initialisée à 2 : <br/>
+        ||  <strong>var bombRange</strong><br/></li>
+</ul>
+<hr />
+<ul>
+<li>Tableau des bombes que le joueur possède: <br/>
+        ||  <strong>var bombList</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Nombre d&rsquo;instances de &ldquo;Bombe&rdquo; que le joueur peut poser, initialisée à 2 : <br/>
+        ||  <strong>var bombCapacity</strong><br/></li>
+</ul>
+<hr />
+<h4 id="relatives-aux-bonus">Relatives aux bonus</h4>
+<ul>
+<li>Booléen donnant la situation du bonus GodMode : s&rsquo;il est à <em>false</em> le joueur n&rsquo;a pas le bonus et s&rsquo;il est à <em>true</em> le joueur a le bonus. Initialisée à <em>false</em> : <br/>
+        ||  <strong>var invincible</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Booléen donnant la situation du bonus Lumière : s&rsquo;il est à <em>false</em> le joueur n&rsquo;a pas le bonus et s&rsquo;il est à <em>true</em> le joueur a le bonus. Initialisée à <em>false</em> : <br/>
+        ||  <strong>var lumi</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Booléen donnant la situation du bonus Nombre : s&rsquo;il est à <em>false</em> le joueur n&rsquo;a pas le bonus et s&rsquo;il est à <em>true</em> le joueur a le bonus. Initialisée à <em>false</em> : <br/>
+        ||  <strong>var nb</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Booléen donnant la situation du bonus Pousser : s&rsquo;il est à <em>false</em> le joueur n&rsquo;a pas le bonus et s&rsquo;il est à <em>true</em> le joueur a le bonus. Initialisée à <em>false</em> : <br/>
+        ||  <strong>var pousse</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Booléen donnant la situation du bonus Range : s&rsquo;il est à <em>false</em> le joueur n&rsquo;a pas le bonus et s&rsquo;il est à <em>true</em> le joueur a le bonus. Initialisée à <em>false</em> : <br/>
+        ||  <strong>var rang</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Booléen donnant la situation du bonus Vitesse : s&rsquo;il est à <em>false</em> le joueur n&rsquo;a pas le bonus et s&rsquo;il est à <em>true</em> le joueur a le bonus. Initialisée à <em>false</em> : <br/>
+        ||  <strong>var vite</strong> <br/></li>
+</ul>
+<hr />
+<h4 id="relatives-a-la-lumiere">Relatives à la lumière</h4>
+<ul>
+<li>Booléen indiquant si la lumière est allumée (= le bonus lumière est actif). Initialisée à <em>true</em> : <br/>
+        ||  <strong>var light</strong> <br/></li>
+</ul>
+<hr />
+<h4 id="mode-de-jeu">Mode de jeu</h4>
+<ul>
+<li>Indique si la partie est en solo ou en multi, initialisée à <em>true</em> : <br/>
+        ||  <strong>var isSingleplayer</strong> <br/></li>
+</ul>
+<hr />
+<h4 id="commandes-des-joueurs">Commandes des joueurs</h4>
+<ul>
+<li>Tableau des touches pour chaque joueur en fonction de son ID : <br/>
+        ||  <strong>var keyMapping</strong><br/></li>
+</ul>
+<hr />
+<h2 id="fonctions">Fonctions</h2>
+<h4 id="scene">Scène</h4>
+<ul>
+<li>Fonction appelée quand le node entre pour la première fois sur la scène. On détermine si nous sommes en solo ou en multijoueur et le cas échéant on rajoute la restriction de lumière ou non :<br/>
+          || <strong>func ready()</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Fonction appelée à chaque frame du jeu. Sert à gérer les déplacements, l&rsquo;arrivée à la sortie, les animations et la capacité de bombes :<br/>
+          || <strong>func process(delta)</strong> <br/></li>
+</ul>
+<hr />
+<h4 id="getters">Getters</h4>
+<ul>
+<li>Fonction permettant de récupérer le nombre de vie restant au joueur (utilisée par HUD) :<br/>
+          || <strong>func getHeart()</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Fonction permettant de savoir si le joueur a le bonus GodMode (utilisée par HUD) :<br/>
+          || <strong>func getInvincible()</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Fonction permettant de savoir si le joueur a le bonus Lumière (utilisée par HUD) :<br/>
+          || <strong>func getLumiere()</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Fonction permettant de savoir si le joueur a le bonus Nombre de Bombes (utilisée par HUD) :<br/>
+          || <strong>func getNb()</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Fonction permettant de savoir si le joueur a le bonus Pousser (utilisée par HUD) :<br/>
+          || <strong>func getPousse()</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Fonction permettant de savoir si le joueur a le bonus Portée (utilisée par HUD) :<br/>
+          || <strong>func getRange()</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Fonction permettant de savoir si le joueur a le bonus Vitesse (utilisée par HUD) :<br/>
+          || <strong>func getVite()</strong> <br/></li>
+</ul>
+<hr />
+<h4 id="relatives-aux-bonus_1">Relatives aux Bonus</h4>
+<ul>
+<li>Fonction appelée lorsque le joueur obtient le bonus GodMode. Elle permet d&rsquo;aumenter le score en conséquence (+30 points pour l&rsquo;obtention d&rsquo;un bonus) puis de rendre le joueur invincible pendant 5 secondes :<br/>
+          || <strong>func godmode()</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Fonction appelée lorsque le joueur obtient le bonus Lumière. Elle permet d&rsquo;aumenter le score en conséquence (+30 points pour l&rsquo;obtention d&rsquo;un bonus) puis de rendre la maze visible pendant 2 secondes :<br/>
+          || <strong>func lumiere()</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Fonction appelée lorsque le joueur obtient le bonus Nombre de Bombes. Elle permet d&rsquo;aumenter le score en conséquence (+30 points pour l&rsquo;obtention d&rsquo;un bonus) puis d&rsquo;augmenter le nombre de bombes que peut poser le joueur en même temps :<br/>
+          || <strong>func augmenteBombCapacity()</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Fonction appelée lorsque le joueur obtient le bonus Pousser. Elle permet d&rsquo;aumenter le score en conséquence (+30 points pour l&rsquo;obtention d&rsquo;un bonus) puis de rendre les bombes posées par le joueur &ldquo;poussables&rdquo; :<br/>
+          || <strong>func pousseBombe()</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Fonction appelée lorsque le joueur obtient le bonus Portée. Elle permet d&rsquo;aumenter le score en conséquence (+30 points pour l&rsquo;obtention d&rsquo;un bonus) puis d&rsquo;augmenter la portée des bombes posées par le joueur :<br/>
+          || <strong>func augmenteRange()</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Fonction appelée lorsque le joueur obtient le bonus Vitesse. Elle permet d&rsquo;aumenter le score en conséquence (+30 points pour l&rsquo;obtention d&rsquo;un bonus) puis d&rsquo;augmenter la vitesse du joueur de 100 :<br/>
+          || <strong>func augmenteSpeed()</strong> <br/></li>
+</ul>
+<hr />
+<h4 id="gestion-du-multijoueur">Gestion du multijoueur</h4>
+<ul>
+<li>Attribue un ID au joueur :<br/>
+          || <strong>func setId()</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Désactive la restriction de vision en multijoueur :<br/>
+          || <strong>func disabledLight()</strong> <br/></li>
+</ul>
+<hr />
+<h4 id="gestion-des-bombes-et-explosions">Gestion des bombes et explosions</h4>
+<ul>
+<li>Permet de poser une bombe. On instancie une bombe, on la place à la position du joueur et si le joueur a le bonus Pousser on met la bombe en mode character :<br/>
+          || <strong>func setup_bomb(bomb_name, pos)</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>Fonction appelée lorsqu&rsquo;on se fait toucher par une bombe. On vérifie alors si le joueur est invincible, si ce n&rsquo;est pas le cas, alors soit il perd une vie soit il perd la partie le cas échant :<br/>
+          || <strong>func bombed()</strong> <br/></li>
+</ul>
+<hr />
+<h4 id="fin-de-partie">Fin de partie</h4>
+<ul>
+<li>En cas de victoire, on prévient GameManager qu&rsquo;on a gagné :<br/>
+          || <strong>func win()</strong> <br/></li>
+</ul>
+<hr />
+<ul>
+<li>En cas de défaite, on prévient GameManager, on joue le son de défaite et on arrête la musique de jeu :<br/>
+          || <strong>func lose()</strong> <br/></li>
+</ul>
+<hr />
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../GameManager/" class="md-footer__link md-footer__link--prev" aria-label="Previous: GameManager" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              GameManager
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Bomb/" class="md-footer__link md-footer__link--next" aria-label="Next: Bomb" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Bomb
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.instant", "navigation.tabs", "toc.integrate", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.01de222e.min.js"></script>
+      
+    
+  </body>
+</html>
